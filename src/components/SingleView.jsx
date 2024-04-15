@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Button from './ui/Button';
 
 const SingleView = (props) => {
   const {selectedItem, setSelectedItem} = props;
@@ -9,9 +10,12 @@ const SingleView = (props) => {
 
   return (
     <>
-      <dialog open={selectedItem ? true : false}>
+      <dialog
+      className='fixed top-0 h-dvh w-dvw bg-black bg-opacity-50 p-4 text-stone-100'
+      open={selectedItem ? true : false}
+      >
         <div>
-          <button onClick={handleClick}>Close</button>
+          <Button text='Close' handleClick={handleClick} />
         </div>
         {selectedItem && (
           <>

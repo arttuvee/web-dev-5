@@ -22,7 +22,7 @@ const mediaArray = [
     filesize: 1002912,
     media_type: 'image/jpeg',
     title: 'Pic 2',
-    description: '',
+    description: 'This is a placeholder picture.',
     created_at: '2024-01-07T21:32:27.000Z',
   },
   {

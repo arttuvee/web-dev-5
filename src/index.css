@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: system-ui, sans-serif;
   line-height: 1.5;
@@ -76,6 +80,7 @@ td a {
 }
 
 /* media item dialog */
+/*
 dialog {
   position: fixed;
   top: 5%;
@@ -85,11 +90,13 @@ dialog {
   color: rgba(255, 255, 255, 0.87);
 }
 
+
 dialog img,
 video {
   height: 50%;
   object-fit: contain;
 }
+*/
 
 /* single view */
 img,
@@ -133,6 +140,7 @@ form textarea {
   border-radius: 5px;
 }
 
+/*
 button {
   margin: 10px 0;
   padding: 10px;
@@ -142,3 +150,4 @@ button {
   border: none;
   cursor: pointer;
 }
+*/
