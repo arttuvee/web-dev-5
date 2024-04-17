@@ -11,29 +11,34 @@ const SingleView = (props) => {
   return (
     <>
       <dialog
-      className='fixed top-0 h-dvh w-dvw bg-black bg-opacity-50 p-4 text-stone-100'
-      open={selectedItem ? true : false}
+        className="fixed top-0 z-50 flex h-4/5 flex-col items-center
+        justify-center bg-transparent pt-10 text-white"
+        open={selectedItem ? true : false}
       >
         <div>
-          <Button text='Close' handleClick={handleClick} />
+          <Button text="Close" handleClick={handleClick} />
         </div>
         {selectedItem && (
           <>
             {selectedItem.media_type.includes('video') ? (
-              <video controls>
+              <video controls className="h-1/2 object-contain">
                 <source
                   src={selectedItem.filename}
                   type={selectedItem.media_type}
                 />
               </video>
             ) : (
-              <img src={selectedItem.filename} alt={selectedItem.title} />
+              <img
+                src={selectedItem.filename}
+                alt={selectedItem.title}
+                className="h-1/2 object-contain"
+              />
             )}
-            <h2>{selectedItem.title}</h2>
-            <p>{selectedItem.description}</p>
-            <p>Created: {new Date(selectedItem.created_at).toLocaleString()}</p>
-            <p>Size: {selectedItem.filesize}</p>
-            </>
+            <div className="mt-4 text-center">
+              <h2>{selectedItem.title}</h2>
+              <p>{selectedItem.description}</p>
+            </div>
+          </>
         )}
       </dialog>
     </>

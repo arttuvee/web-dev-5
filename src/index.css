@@ -23,6 +23,10 @@
   padding: 2rem;
 }
 
+body {
+  height: 100vh;
+}
+
 /* nav */
 nav ul {
   list-style-type: none;
