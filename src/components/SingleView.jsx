@@ -21,7 +21,11 @@ const SingleView = (props) => {
         {selectedItem && (
           <>
             {selectedItem.media_type.includes('video') ? (
-              <video controls className="h-1/2 object-contain">
+              <video
+                controls
+                className="
+              n"
+              >
                 <source
                   src={selectedItem.filename}
                   type={selectedItem.media_type}
