@@ -1,5 +1,6 @@
-import useForm from '../hooks/formHooks';
 import {useUser} from '../hooks/apiHooks';
+import useForm from '../hooks/formHooks';
+import Button from './UI/Button';
 
 const RegisterForm = () => {
   const {register} = useUser();
@@ -14,7 +15,7 @@ const RegisterForm = () => {
     console.log('doRegister', inputs);
     try {
       const userData = await register(inputs);
-      console.log('userData', userData);
+      console.log('doRegister', userData);
     } catch (error) {
       alert(error.message);
     }
@@ -36,7 +37,15 @@ const RegisterForm = () => {
             type="text"
             id="registeruser"
             onChange={handleInputChange}
-            autoComplete="username"
+          />
+        </div>
+        <div>
+          <label htmlFor="registeremail">Email</label>
+          <input
+            name="email"
+            type="email"
+            id="registeremail"
+            onChange={handleInputChange}
           />
         </div>
         <div>
@@ -46,10 +55,9 @@ const RegisterForm = () => {
             type="password"
             id="registerpassword"
             onChange={handleInputChange}
-            autoComplete="current-password"
           />
         </div>
-        <button type="submit">Register</button>
+        <Button text="Register" />
       </form>
     </>
   );
