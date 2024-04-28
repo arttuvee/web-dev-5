@@ -1,4 +1,3 @@
-Open [link](https://users.metropolia.fi/~arttuvo/wsk-routing/) to view it in the browser.
 
 # React + Vite
 
